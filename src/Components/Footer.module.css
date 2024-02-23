@@ -1,0 +1,19 @@
+/* position: fixed; */
+/* bottom: 0; */
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  background: linear-gradient(356deg, #070707 2.85%, #5a5a5a 97.06%);
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 37.49rem) {
+  .footer {
+    display: none;
+  }
+}

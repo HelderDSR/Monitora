@@ -1,0 +1,46 @@
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.toggle {
+  display: none;
+  margin: 0px;
+}
+
+.toggleLabel {
+  width: 32px;
+  height: 20px;
+  background: lightgrey;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 200ms;
+}
+
+.toggle:checked + .toggleLabel {
+  background: blue;
+}
+
+.toggleLabel::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: 200ms;
+}
+
+/* Estilo para o botão toggle */
+.toggle:checked + .toggleLabel::before {
+  left: calc(100% - 20px);
+  box-shadow: 0 4px 4px rgb(0, 0, 0 / 10%);
+}
+
+.description {
+  margin-left: 10px;
+}

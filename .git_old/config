@@ -1,0 +1,30 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/jesiqueira/monitora_front_end.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[gitflow "branch"]
+	master = master
+	develop = develop
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = 
+[gitflow "path"]
+	hooks = C:/VsCode/monitora_front_end/.git/hooks
+[gitflow "branch.feature/descarte"]
+	base = develop

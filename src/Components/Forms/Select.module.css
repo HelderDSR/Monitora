@@ -1,0 +1,32 @@
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.local {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection {
+  margin: 8px 0px;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  background: #eee;
+  transition: 0.1s;
+  color: #686060;
+}
+.selection:focus,
+.selection:hover {
+  outline: none;
+  border-color: #e71f1f;
+  background: white;
+  box-shadow: 0 0 0 3px #fb8267;
+}
+
+.error {
+  color: #f31;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

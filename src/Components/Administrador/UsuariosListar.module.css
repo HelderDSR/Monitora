@@ -1,0 +1,419 @@
+.section {
+  display: grid;
+  grid-template-areas:
+    'detalhe detalhe'
+    'titulo titulo'
+    'erro erro';
+  margin: 0 auto;
+}
+
+.detalhe {
+  grid-area: detalhe;
+  display: grid;
+  justify-content: end;
+  margin: 50px 50px 50px 0px;
+  max-height: 52px;
+}
+
+.detalhe > svg {
+  transform: rotate(90deg);
+}
+
+.titulo {
+  grid-area: titulo;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 50px;
+}
+
+.titulo div:first-child {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+}
+
+.titulo div:first-child > h1 {
+  font-size: 2.5rem;
+  margin-left: 20px;
+}
+
+.titulo div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+.titulo div:last-child a {
+  list-style: none;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.titulo div:last-child form {
+  display: flex;
+  align-items: center;
+}
+.titulo div:last-child a + form {
+  margin-left: 70px;
+}
+
+.titulo div:last-child input {
+  margin: 8px 0px;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  background: #eee;
+  transition: 0.1s;
+  color: #686060;
+}
+
+.titulo div:last-child input:focus,
+.titulo div:last-child input:hover {
+  outline: none;
+  border-color: #e71f1f;
+  background: white;
+  box-shadow: 0 0 0 3px #fb8267;
+}
+
+.titulo div:last-child input + button {
+  margin-left: 20px;
+  background: #b47162;
+  color: #47261f;
+  height: 45px;
+  padding: 8px;
+}
+
+.titulo div:last-child input + button:focus,
+.titulo div:last-child input + button:hover {
+  color: white;
+}
+
+.erro {
+  grid-area: erro;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 150px;
+  padding: 10px;
+  color: red;
+}
+
+.hr {
+  width: 1300px;
+  margin: 50px auto;
+  background: #d9d9d9;
+  height: 3px;
+}
+
+.sectionTable {
+  grid-area: article;
+  background: #ebebeb;
+  margin: 0px auto;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 10px;
+}
+
+.visualizarDados {
+  display: grid;
+  grid-template-areas:
+    'dadosPerfil'
+    'form';
+  grid-auto-rows: 1fr 2fr;
+  background: #d9d9d9;
+  margin: 30px 0 50px 0;
+  border-radius: 5px;
+  padding: 20px;
+  max-height: 500px;
+  max-width: 400px;
+  justify-items: center;
+}
+
+.dadosPerfil {
+  grid-area: dadosPerfil;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.info_foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #b5b5b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info div:last-child {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.info div:last-child h1 {
+  font-size: 1.3rem;
+  width: 15rem;
+}
+
+.info div:last-child h2 {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.info div:last-child h3 {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.hrInfo {
+  height: 3px;
+  margin-top: 20px;
+}
+hr {
+  display: block;
+  margin: 20px 0;
+}
+
+.form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #e3e1e1;
+  text-align: center;
+  border-radius: 5px;
+}
+.password {
+  text-align: left;
+  margin-top: 10px;
+}
+.form button {
+  max-width: 100px;
+  background: #b47162;
+  color: #47261f;
+}
+
+.form button:focus,
+.form button:hover {
+  color: white;
+}
+
+.paginacao {
+  grid-area: paginacao;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/*MEDIAS*/
+
+@media only screen and (max-width: 95rem) {
+  .visualizarDados {
+    min-width: 300px;
+  }
+
+  .info div:last-child h1 {
+    font-size: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 87rem) {
+  .hr {
+    width: 1040px;
+    margin: 33px auto;
+  }
+  .erro {
+    margin-right: 153px;
+  }
+}
+
+@media (max-width: 77rem) {
+  .titulo div:first-child > h1 {
+    font-size: 2rem;
+    margin-left: 15px;
+  }
+
+  .titulo div:last-child a {
+    font-size: 1.5rem;
+  }
+
+  .titulo div:last-child a + form {
+    margin-left: 45px;
+  }
+  .hr {
+    width: 866px;
+    margin: 45px auto;
+  }
+
+  .erro {
+    margin-right: 153px;
+  }
+}
+
+@media (max-width: 70rem) {
+  .titulo div:last-child input {
+    font-size: 0.8rem;
+    max-width: 200px;
+  }
+
+  .titulo div:last-child input + button {
+    font-size: 0.8rem;
+    min-width: 6rem;
+    height: 40px;
+  }
+  .hr {
+    width: 697px;
+    margin: 40px auto;
+  }
+  .erro {
+    margin-right: 81px;
+  }
+}
+
+@media (max-width: 62rem) {
+  .titulo div:first-child > h1 {
+    font-size: 1.5rem;
+  }
+
+  .titulo div:last-child a + form {
+    margin-left: 35px;
+  }
+
+  /* .titulo div:last-child input + button {
+    height: 40px;
+    background: red;
+  } */
+  .hr {
+    width: 650px;
+    margin: 33px auto;
+  }
+}
+
+@media (max-width: 55rem) {
+  .detalhe {
+    display: none;
+  }
+
+  .titulo {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .titulo div:first-child > h1 {
+    font-size: 2.8rem;
+  }
+
+  .titulo div:last-child {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  .titulo div:last-child a {
+    list-style: none;
+    color: black;
+    font-size: 2rem;
+  }
+
+  .titulo div:last-child a + form {
+    margin-left: 12rem;
+  }
+
+  .titulo div:last-child input {
+    font-size: 1rem;
+  }
+
+  .titulo div:last-child input + button {
+    height: 43px;
+  }
+
+  .lista {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .visualizarDados {
+    margin-bottom: 10px;
+    grid-row: 1;
+    grid-template-areas: 'dadosPerfil form';
+    align-items: center;
+    min-width: 600px;
+  }
+
+  .dadosPerfil {
+    width: 100%;
+  }
+
+  .info div:last-child h1 {
+    font-size: 1rem;
+    width: 150px;
+  }
+
+  .hr {
+    width: 550px;
+  }
+
+  .sectionTable {
+    margin-bottom: 70px;
+  }
+  .erro {
+    margin-right: 78px;
+  }
+}
+
+@media (max-width: 49.5rem) {
+  .titulo div:last-child a + form {
+    margin-left: 5rem;
+  }
+
+  .titulo div:last-child input + button {
+    height: 42px;
+  }
+}
+
+@media (max-width: 42rem) {
+  .titulo div:last-child a {
+    font-size: 1.3rem;
+  }
+
+  .titulo div:last-child a + form {
+    margin-left: 2rem;
+  }
+
+  .titulo div:last-child input {
+    margin: 4px 0px;
+    font-size: 1rem;
+    padding: 0.6rem;
+    width: 180px;
+  }
+
+  .titulo div:last-child input + button {
+    height: 38px;
+  }
+
+  .info div:last-child h1 {
+    font-size: 1rem;
+    width: 150px;
+  }
+
+  .visualizarDados {
+    align-items: center;
+    min-width: 500px;
+  }
+
+  .hr {
+    width: 400px;
+  }
+  .erro {
+    margin-right: 60px;
+  }
+}

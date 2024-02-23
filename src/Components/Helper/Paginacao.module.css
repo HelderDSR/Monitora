@@ -1,0 +1,15 @@
+.container ul {
+  display: flex;
+}
+
+.container ul li + li {
+  margin-left: 10px;
+}
+
+.active {
+  background: rgb(183, 209, 183);
+}
+
+.active > button {
+  color: rgb(16, 39, 3);
+}

@@ -1,0 +1,152 @@
+.estrutura {
+  display: grid;
+  grid-template-areas:
+    'detalhe detalhe'
+    'content content';
+}
+
+.detalhe {
+  grid-area: detalhe;
+  margin: 50px 120px 0 0;
+  max-height: 52px;
+  display: grid;
+  justify-items: end;
+}
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    'titulo titulo'
+    'section section';
+}
+
+.titulo {
+  /* background: rebeccapurple; */
+  grid-area: titulo;
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  padding: 10px;
+  margin-left: 50px;
+  max-width: 630px;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.section {
+  /* background: rebeccapurple; */
+  grid-area: section;
+  background: #f5f5f5;
+  margin: 80px 100px 120px 100px;
+  padding: 60px;
+  border-radius: 5px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+}
+
+.button {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dados1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.dados2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.local {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection {
+  margin: 8px 0px;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  background: #eee;
+  transition: 0.1s;
+  color: #686060;
+}
+
+.selection:focus,
+.selection:hover {
+  outline: none;
+  border-color: #e71f1f;
+  background: white;
+  box-shadow: 0 0 0 3px #fb8267;
+}
+
+.relacao {
+  margin-top: 1rem;
+}
+
+.toggleContainer {
+  /* background: rebeccapurple; */
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  display: none;
+  margin: 0px;
+}
+
+.toggleLabel {
+  width: 32px;
+  height: 20px;
+  background: lightgrey;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 200ms;
+}
+
+.toggle:checked + .toggleLabel {
+  background: blue;
+}
+
+.toggleLabel::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: 200ms;
+}
+
+/* Estilo para o botão toggle */
+.toggle:checked + .toggleLabel::before {
+  left: calc(100% - 20px);
+  box-shadow: 0 4px 4px rgb(0, 0, 0 / 10%);
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.erro {
+  color: #f31;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

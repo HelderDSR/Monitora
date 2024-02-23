@@ -1,0 +1,124 @@
+.main {
+  display: grid;
+  grid-template-areas:
+    'titulo'
+    'hr'
+    'section';
+  max-width: 1200px;
+  margin-inline: auto;
+
+  .titulo {
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+  }
+
+  .hr {
+    grid-area: hr;
+    border: none;
+    height: 2px;
+    background: #d9d9d9;
+    width: 70%;
+    margin: 60px auto;
+  }
+
+  .section {
+    grid-area: section;
+    display: grid;
+    grid-template-areas: 'imagem form';
+    background: #f5f5f5;
+    width: max(980px, 100% - 13rem);
+    margin-inline: auto;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+
+    .imagem svg {
+      grid-area: imagem;
+      width: 600px;
+      height: 600px;
+    }
+
+    .form {
+      grid-area: form;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 40px;
+
+      .dadosForm {
+        display: flex;
+        column-gap: 50px;
+      }
+
+      .button {
+        display: flex;
+        column-gap: 50px;
+        max-height: 50px;
+
+        button:first-child {
+          background: #9e8f0a;
+
+          &:focus,
+          &:hover {
+            outline: none;
+            color: white;
+          }
+        }
+
+        button:last-child {
+          background: #d38f80;
+
+          &:focus,
+          &:hover {
+            outline: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA 980 - 1200 */
+@media only screen and (min-width: 61.25rem) and (max-width: 75rem) {
+  .main {
+    .section {
+      width: max(880px, 100% - 13rem);
+      .imagem svg {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+/* MEDIA 600 - 980 */
+@media only screen and (min-width: 37.5rem) and (max-width: 61.249rem) {
+  .main {
+    .section {
+      width: max(580px, 100% - 13rem);
+      grid-template-areas:
+        'imagem'
+        'form';
+      .imagem svg {
+        display: none;
+      }
+    }
+  }
+}
+
+/* MEDIA < 600 */
+@media only screen and (max-width: 37.49rem) {
+  .main {
+    .section {
+      width: max(400px, 100% - 13rem);
+      grid-template-areas:
+        'imagem'
+        'form';
+      .imagem svg {
+        display: none;
+      }
+    }
+  }
+}

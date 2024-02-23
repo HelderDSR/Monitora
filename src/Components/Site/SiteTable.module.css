@@ -1,0 +1,106 @@
+@charset "UTF-8";
+.wrapper .table_container .table {
+  border-collapse: collapse;
+  background: #323232;
+  width: 100%;
+  /* Estilo para linhas ímpares */
+  /* Estilo para linhas pares */
+}
+.wrapper .table_container .table caption,
+.wrapper .table_container .table th,
+.wrapper .table_container .table td {
+  padding: 0.6rem;
+}
+.wrapper .table_container .table th,
+.wrapper .table_container .table td {
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .table_container .table caption,
+.wrapper .table_container .table th {
+  text-align: left;
+}
+.wrapper .table_container .table caption {
+  background: rgb(134, 128, 128);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+.wrapper .table_container .table th a:hover {
+  color: rgb(138, 128, 128);
+}
+.wrapper .table_container .table td:nth-child(1) {
+  color: rgb(65, 65, 105);
+}
+.wrapper .table_container .table td:nth-child(1):hover {
+  color: rgb(129, 129, 153);
+  cursor: pointer;
+}
+.wrapper .table_container .table tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas ímpares */
+}
+.wrapper .table_container .table tr:nth-child(even) {
+  background-color: #ffffff; /* Cor de fundo para linhas pares */
+}
+
+/* MEDIA 980 - 1200 */
+@media only screen and (min-width: 61.25rem) and (max-width: 75rem) {
+  .wrapper {
+    width: min(870px, 100% - 3rem);
+    overflow-x: auto;
+    margin-inline: auto;
+  }
+  .wrapper .table_container .table td:nth-last-child(2),
+  .wrapper .table_container .table th:nth-last-child(2) {
+    max-width: 9rem;
+    text-overflow: ellipsis; /* adiciona "..." ao final do texto se ele for cortado */
+    white-space: nowrap; /* impede que o texto quebre em várias linhas */
+  }
+}
+/* MEDIA 600 - 980 */
+@media only screen and (min-width: 600px) and (max-width: 980px) {
+  .wrapper {
+    width: min(600px, 100% - 3rem);
+    overflow-x: auto;
+    margin-inline: auto;
+  }
+  .wrapper .table_container .table td:nth-last-child(2),
+  .wrapper .table_container .table th:nth-last-child(2) {
+    max-width: 9rem;
+    text-overflow: ellipsis; /* adiciona "..." ao final do texto se ele for cortado */
+    white-space: nowrap; /* impede que o texto quebre em várias linhas */
+  }
+}
+
+/* MEDIA < 600 */
+@media only screen and (max-width: 37.49rem) {
+  .wrapper {
+    width: min(650px, 100% - 3rem);
+    margin-inline: auto;
+  }
+  .wrapper .table_container .table th {
+    display: none;
+  }
+  .wrapper .table_container .table td {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 11ch auto;
+    padding: 0.5rem 1rem;
+  }
+  .wrapper .table_container .table td:first-child {
+    padding-top: 2rem;
+  }
+  .wrapper .table_container .table td:last-child {
+    padding-bottom: 2rem;
+  }
+  .wrapper .table_container .table td::before {
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
+
+/*# sourceMappingURL=SiteTable.module.css.map */

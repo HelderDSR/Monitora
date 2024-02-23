@@ -1,0 +1,163 @@
+/* Estilo básico da tabela */
+.tableContainer {
+  overflow-x: auto;
+  width: 100%;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 10px;
+}
+
+.table th {
+  text-align: center;
+  padding: 10px;
+  background: #b1abab;
+  color: black;
+}
+
+.table th > a,
+.table td > a {
+  color: black;
+}
+
+.table th > a:hover {
+  color: rgb(138, 128, 128);
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+.table td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap; /* Evitar quebra de linha dentro da célula */
+  overflow: hidden; /* Ocultar conteúdo que ultrapassa a célula */
+  text-overflow: ellipsis; /* Adicionar reticências (...) para indicar conteúdo truncado */
+}
+
+.table td:nth-child(1),
+.table th:nth-child(1) {
+  max-width: 6.25rem;
+  text-overflow: ellipsis; /* adiciona "..." ao final do texto se ele for cortado */
+  white-space: nowrap; /* impede que o texto quebre em várias linhas */
+}
+
+.table td:nth-child(2),
+.table th:nth-child(2) {
+  max-width: 3.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(65, 65, 105);
+}
+
+.table td:nth-child(2):hover {
+  color: rgb(129, 129, 153);
+}
+
+.table td:nth-child(3),
+.table th:nth-child(3),
+.table td:nth-child(5),
+.table th:nth-child(5),
+.table td:nth-child(4),
+.table th:nth-child(4) {
+  max-width: 3.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table td:last-child,
+.table th:last-child {
+  max-width: 6.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.handleSelecione {
+  cursor: pointer;
+}
+
+/* Estilo para linhas ímpares */
+.table tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas ímpares */
+}
+
+/* Estilo para linhas pares */
+.table tr:nth-child(even) {
+  background-color: #ffffff; /* Cor de fundo para linhas pares */
+}
+
+@media only screen and (max-width: 101rem) {
+  .tableContainer {
+    overflow-x: auto;
+    min-width: 1100px;
+  }
+}
+@media only screen and (max-width: 89rem) {
+  .tableContainer {
+    overflow-x: auto;
+    min-width: 50rem;
+  }
+  .table td:nth-child(4),
+  .table th:nth-child(4),
+  .table td:nth-child(5),
+  .table th:nth-child(5) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 70rem) {
+  .tableContainer {
+    overflow-x: auto;
+    min-width: 20rem;
+  }
+}
+
+@media (max-width: 55rem) {
+  .tableContainer {
+    overflow-x: auto;
+    min-width: 50rem;
+  }
+
+  .table td:nth-child(3),
+  .table th:nth-child(3),
+  .table td:nth-child(5),
+  .table th:nth-child(5) {
+    display: table-cell;
+  }
+}
+
+@media (max-width: 55rem) {
+  .tableContainer {
+    min-width: 47rem;
+  }
+}
+@media (max-width: 49.5rem) {
+  .tableContainer {
+    min-width: 40rem;
+  }
+  .table td:nth-child(3),
+  .table th:nth-child(3),
+  .table td:nth-child(5),
+  .table th:nth-child(5) {
+    max-width: 4.5rem;
+  }
+  .table td:nth-child(6),
+  .table th:nth-child(6) {
+    max-width: 4.5rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .tableContainer {
+    min-width: 33rem;
+  }
+
+  .table td:nth-child(3),
+  .table th:nth-child(3) {
+    display: none;
+  }
+}

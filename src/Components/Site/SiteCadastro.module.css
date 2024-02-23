@@ -1,0 +1,83 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 14rem);
+}
+.container .main {
+  display: grid;
+  grid-template-areas: "titulo titulo" "imagemHome form";
+  align-items: center;
+  column-gap: 0px;
+  justify-items: center;
+}
+.container .main .titulo {
+  grid-area: titulo;
+}
+.container .main .titulo h1 {
+  font-size: 3rem;
+  margin-top: 2.5rem;
+}
+.container .main .titulo hr {
+  max-width: 80%;
+  margin: 10px auto;
+  height: 2px;
+  border: none;
+  background: rgb(245, 245, 245);
+}
+.container .main .imagemHome {
+  grid-area: imagemHome;
+  max-width: 500px;
+  min-width: 350px;
+}
+.container .main .imagemHome svg {
+  width: 100%;
+  height: 100%;
+}
+.container .main .form {
+  grid-area: form;
+  padding: 10px;
+}
+.container .main .form .dados1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  min-width: 250px;
+}
+.container .main .form button {
+  background: #b47162;
+  color: #47261f;
+  margin-top: 30px;
+}
+.container .main .form button:focus, .container .main .form button:hover {
+  color: white;
+}
+.container .main .form .erro {
+  color: red;
+}
+
+@media only screen and (max-width: 41rem) {
+  .container .main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .container .main .titulo h1 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+  .container .main .titulo hr {
+    margin: 30px auto;
+  }
+  .container .main .imagemHome {
+    display: none;
+  }
+  .container .main .form {
+    padding: 20px;
+    margin-right: 10px;
+  }
+  .container .main .form button:focus,
+  .container .main .form button:hover {
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=SiteCadastro.module.css.map */

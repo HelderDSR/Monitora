@@ -1,0 +1,44 @@
+/* Estilo básico da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+  padding: 10px;
+  background: #b1abab;
+  color: black;
+}
+
+th > a,
+td > a {
+  color: black;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  white-space: nowrap; /* Evitar quebra de linha dentro da célula */
+  overflow: hidden; /* Ocultar conteúdo que ultrapassa a célula */
+  text-overflow: ellipsis; /* Adicionar reticências (...) para indicar conteúdo truncado */
+}
+
+/* Estilo para linhas ímpares */
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas ímpares */
+}
+
+/* Estilo para linhas pares */
+tr:nth-child(even) {
+  background-color: #ffffff; /* Cor de fundo para linhas pares */
+}
